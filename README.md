@@ -115,8 +115,6 @@ $env:TMDB_TOKEN = "your-read-access-token"
 export TMDB_TOKEN="your-read-access-token"
 ```
 
-Do not commit an API token to the repository.
-
 ## Running the notebooks
 
 Start Jupyter from the `notebooks` directory so the relative processed-data
