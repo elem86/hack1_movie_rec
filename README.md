@@ -119,8 +119,10 @@ Do not commit an API token to the repository.
 
 ## Running the notebooks
 
-Start Jupyter from the `notebooks` directory. This is important because the
-processed-data paths in notebooks 02 and 03 are relative to that directory.
+Start Jupyter from the `notebooks` directory so the relative processed-data
+paths in notebooks 02 and 03 resolve correctly. Notebook 01 now discovers the
+project root automatically and works from either the project root or this
+directory.
 
 ```powershell
 cd notebooks
@@ -139,12 +141,13 @@ Run the notebooks in order:
 If the processed CSV files are already present, you can open notebook 03
 directly.
 
-### Path note
+### Path handling
 
-Notebook 01 currently contains absolute Windows paths in its first data-loading
-cell and in `TMDB_CACHE`. If the repository is moved to another location, update
-those paths before running notebook 01. Notebooks 02 and 03 use paths relative to
-the `notebooks` directory.
+Notebook 01 searches upward from the current working directory for the project
+root and builds all raw-data, TMDB-cache, and processed-data paths from it. No
+machine-specific absolute paths need to be edited after moving or cloning the
+repository. Start Jupyter from the project root or `notebooks` directory so the
+project can be discovered.
 
 ## Using the demo
 
