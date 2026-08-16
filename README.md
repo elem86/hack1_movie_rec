@@ -80,6 +80,16 @@ hack1_movie_rec/
 Python 3.10 or newer is recommended. The project was validated with Python
 3.13.
 
+The interactive controls in notebook 03 require `ipywidgets`. It is included in
+`requirements.txt`, so the normal installation command below installs it
+automatically. If you install packages individually, run:
+
+```bash
+python -m pip install ipywidgets
+```
+
+Restart the Jupyter kernel after installing it if the widgets do not appear.
+
 From the project root on Windows PowerShell:
 
 ```powershell
